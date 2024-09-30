@@ -171,7 +171,7 @@ const Select = ({
             )}
             <AddMore>
               <Icon type="plus" />
-              Add more
+              添加
             </AddMore>
           </ValueMulti>
         )}

@@ -47,7 +47,7 @@ export const Item = styled.div`
   position: relative;
   width: 100%;
   height: 42px;
-  line-height: 42px;
+  line-height: 30px;
   padding-left: 64px;
   color: #deebff;
   transition: color 0.1s;

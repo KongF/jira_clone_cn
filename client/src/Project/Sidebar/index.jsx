@@ -34,14 +34,15 @@ const ProjectSidebar = ({ project }) => {
         </ProjectTexts>
       </ProjectInfo>
 
-      {renderLinkItem(match, 'Kanban Board', 'board', '/board')}
-      {renderLinkItem(match, 'Project settings', 'settings', '/settings')}
+      {renderLinkItem(match, '看板', 'board', '/board')}
+      {renderLinkItem(match, '项目设置', 'settings', '/settings')}
       <Divider />
-      {renderLinkItem(match, 'Releases', 'shipping')}
-      {renderLinkItem(match, 'Issues and filters', 'issues')}
-      {renderLinkItem(match, 'Pages', 'page')}
-      {renderLinkItem(match, 'Reports', 'reports')}
-      {renderLinkItem(match, 'Components', 'component')}
+      {renderLinkItem(match, '版本', 'shipping','/release')}
+      {renderLinkItem(match, '需求', 'issues','/backlog')}
+      {renderLinkItem(match, '任务', 'task',)}
+      {renderLinkItem(match, '缺陷', 'bug',)}
+      {renderLinkItem(match, '报告', 'reports',)}
+      {renderLinkItem(match, '组件', 'component')}
     </Sidebar>
   );
 };
@@ -57,7 +58,7 @@ const renderLinkItem = (match, text, iconType, path) => {
     <LinkItem {...linkItemProps}>
       <Icon type={iconType} />
       <LinkText>{text}</LinkText>
-      {!isImplemented && <NotImplemented>Not implemented</NotImplemented>}
+      {!isImplemented && <NotImplemented>暂未实现</NotImplemented>}
     </LinkItem>
   );
 };

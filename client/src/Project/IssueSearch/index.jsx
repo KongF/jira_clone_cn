@@ -52,7 +52,7 @@ const ProjectIssueSearch = ({ project }) => {
       <SearchInputCont>
         <SearchInputDebounced
           autoFocus
-          placeholder="Search issues by summary, description..."
+          placeholder="输入标题或描述搜索"
           onChange={handleSearchChange}
         />
         <SearchIcon type="search" size={22} />
@@ -61,14 +61,14 @@ const ProjectIssueSearch = ({ project }) => {
 
       {isSearchTermEmpty && recentIssues.length > 0 && (
         <Fragment>
-          <SectionTitle>Recent Issues</SectionTitle>
+          <SectionTitle>最近</SectionTitle>
           {recentIssues.map(renderIssue)}
         </Fragment>
       )}
 
       {!isSearchTermEmpty && matchingIssues.length > 0 && (
         <Fragment>
-          <SectionTitle>Matching Issues</SectionTitle>
+          <SectionTitle>搜索结果</SectionTitle>
           {matchingIssues.map(renderIssue)}
         </Fragment>
       )}
@@ -76,8 +76,8 @@ const ProjectIssueSearch = ({ project }) => {
       {!isSearchTermEmpty && !isLoading && matchingIssues.length === 0 && (
         <NoResults>
           <NoResultsSVG />
-          <NoResultsTitle>We couldn&apos;t find anything matching your search</NoResultsTitle>
-          <NoResultsTip>Try again with a different term.</NoResultsTip>
+          <NoResultsTitle>未查询到您想要的内容</NoResultsTitle>
+          <NoResultsTip>你可以尝试使用其他的关键词，或者简化你的搜索条件。</NoResultsTip>
         </NoResults>
       )}
     </IssueSearch>

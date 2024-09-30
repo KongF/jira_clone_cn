@@ -35,7 +35,7 @@ const initializeExpress = (): void => {
 
   attachPrivateRoutes(app);
 
-  app.use((req, _res, next) => next(new RouteNotFoundError(req.originalUrl)));
+  app.use((req: any, _res: any, next: any) => next(new RouteNotFoundError(req.originalUrl)));
   app.use(handleError);
 
   app.listen(process.env.PORT || 3000);

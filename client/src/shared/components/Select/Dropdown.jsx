@@ -178,7 +178,7 @@ const SelectDropdown = ({
     <Dropdown width={dropdownWidth}>
       <DropdownInput
         type="text"
-        placeholder="Search"
+        placeholder="搜索"
         ref={$inputRef}
         autoFocus
         onKeyDown={handleInputKeyDown}

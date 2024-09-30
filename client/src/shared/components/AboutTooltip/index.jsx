@@ -13,12 +13,12 @@ const AboutTooltip = tooltipProps => (
     renderContent={() => (
       <FeedbackDropdown>
         <FeedbackImageCont>
-          <FeedbackImage src={feedbackImage} alt="Give feedback" />
+          <FeedbackImage src={feedbackImage} alt="反馈意见" />
         </FeedbackImageCont>
 
         <FeedbackParagraph>
-          This simplified Jira clone is built with React on the front-end and Node/TypeScript on the
-          back-end.
+          网站前端使用React构建，后端使用Node/TypeScript构建。
+          去网站阅读更多信息，或通过ivor@codetree.co
         </FeedbackParagraph>
 
         <FeedbackParagraph>
@@ -29,7 +29,7 @@ const AboutTooltip = tooltipProps => (
         </FeedbackParagraph>
 
         <a href="https://getivor.com/" target="_blank" rel="noreferrer noopener">
-          <Button variant="primary">Visit Website</Button>
+          <Button variant="primary">访问</Button>
         </a>
 
         <a href="https://github.com/oldboyxx/jira_clone" target="_blank" rel="noreferrer noopener">
